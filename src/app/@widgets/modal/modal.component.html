@@ -1,0 +1,68 @@
+<!-- <div class="modal-header">
+  <h4 class="modal-title">{{ info.title }}</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <img class="img-fluid" [src]="info.image" alt="" />
+  <p>{{ info.description }}</p>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.close('Close click')"
+  >
+    Close
+  </button>
+</div> -->
+
+<button
+  class="close"
+  type="button"
+  data-dismiss="modal"
+  aria-label="Close"
+  (click)="activeModal.dismiss('Cross click')"
+>
+  <span aria-hidden="true"><i class="fas fa-times"></i></span>
+</button>
+<div class="modal-body-template text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <!-- Portfolio Modal - Title-->
+        <h2
+          class="portfolio-modal-title text-secondary-template text-uppercase mb-0"
+          id="portfolioModal1Label"
+        >
+          {{ info.title }}
+        </h2>
+        <!-- Icon Divider-->
+        <!-- <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div> -->
+        <app-title [dark]="true"></app-title>
+        <!-- Portfolio Modal - Image-->
+        <img class="img-fluid rounded mb-5" [src]="info.image" alt="" />
+        <!-- Portfolio Modal - Text-->
+        <p class="mb-5">{{ info.description }}</p>
+        <button
+          class="btn-template btn-primary-template"
+          data-dismiss="modal"
+          (click)="activeModal.dismiss('Cross click')"
+        >
+          <i class="fas fa-times fa-fw"></i>
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

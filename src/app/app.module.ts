@@ -10,6 +10,8 @@ import { CopyrightModule } from './@components/copyright/copyright.module';
 import { FooterModule } from './@components/footer/footer.module';
 import { HeaderModule } from './@components/header/header.module';
 import { PortfolioModule } from './@components/portfolio/portfolio.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalModule } from '@widgets/modal/modal.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +25,8 @@ import { PortfolioModule } from './@components/portfolio/portfolio.module';
     HeaderModule,
     NavbarModule,
     PortfolioModule,
+    ModalModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
